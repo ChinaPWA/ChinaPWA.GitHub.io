@@ -13,14 +13,14 @@ title: "PWA Kit CLI"
 
 ## 概述
 
-`PWA Kit CLI` 是一组实用工具集合。它可以将任意试图成为网络应用程序的网站提升转换为 渐进式网络应用程序 (Progressive Web Application，以下简称为 PWA)，也包括了 PWA 运行所必须的清单 (manifest) 和 Service Worker 等基本要素。
-除此之外，`PWA Kit CLI` 也为使用者 (一般为开发者或网站管理人员) 提供了网站提升至 PWA 所需的检测工具，通过标准化的审查评测机制通过分类评分来提示当前网站成为 PWA 还缺少什么，以及需要完成的内容。不过使用者并不需要为这些缺少的部分而担心，`PWA Kit CLI` 项目的使命正是智能化的帮助使用者完成这些工作。
+`PWA Kit CLI` 是一组实用工具集合，是 `PWA Kit` 项目的 CLI 分支。它可以将任意潜在的网站转换为 [**`PWA`**](https://web.dev/progressive-web-apps/) (Progressive Web Application，渐进式网络应用)，也包括了 PWA 所必须的 [清单 (manifest)](https://web.dev/add-manifest/) 和 [Service Worker](https://web.dev/learn/pwa/service-workers/) 等基本要素。
+除此之外，`PWA Kit CLI` 也提供了 PWA 检测工具，通过标准化的审查评测机制分类评分来提示当前网站转换为 PWA 还缺少什么，以及需要完成的内容。不过我们并不需要为这些缺少的部分而担心，`PWA Kit CLI` 的使命正是智能化的来完成这些工作。
 
-## 使用
+## 使用说明
 
 `PWA Kit CLI` 的命令组成如下所示：  
 ```bash
-kit <子命令> <参数> [可选参数]
+kit <子命令> [ <参数> [可选参数] ]
 ```
 子命令集合如下所示：
 
