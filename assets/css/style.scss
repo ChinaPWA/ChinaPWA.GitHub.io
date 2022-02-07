@@ -1,0 +1,13 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@import "./cc-icons.min.css";
+
+.language-swicher {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
