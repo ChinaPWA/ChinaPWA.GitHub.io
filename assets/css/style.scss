@@ -6,8 +6,22 @@
 @import "./cc-icons.min.css";
 
 .language-swicher {
-    cursor: pointer;
-    position: absolute;
-    right: 30px;
-    top: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+  color: #2955f6;
+}
+
+.page-header {
+  background-color: #9ed0fb;
+  background-image: linear-gradient(120deg, #9ed0fb, #416ff6, #2955f6);
 }

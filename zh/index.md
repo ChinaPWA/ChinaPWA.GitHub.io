@@ -10,8 +10,9 @@ lang: zh-CN
 ![NPM](https://img.shields.io/npm/l/@dingos/pwa-kit-cli)
 ![npm](https://img.shields.io/npm/dt/@dingos/pwa-kit-cli)
 ![node-current](https://img.shields.io/badge/node-%3E=14.0.0-green)
+
 <div align=center>
-<img src="https://cdn.jsdelivr.net/npm/@dingos/pwa-kit-cli/pwa-kit.png" style="zoom:40%">
+<img src="../assets/images/icon.png" style="zoom: 40%">
 </div>
 
 ## 概述
@@ -49,22 +50,24 @@ npm install -g @dingos/pwa-kit-cli@1.1.16
 
 ## 使用说明
 
-`PWA Kit CLI` 的命令组成如下所示：  
+`PWA Kit CLI` 的命令组成如下所示：
+
 ```bash
 kit <子命令> [ <参数> [可选参数] ]
 ```
+
 子命令集合如下所示：
 
-| 子命令 | 描述 |
-|---|---|
-| gen | 生成 Service Worker, manifest |
+| 子命令 | 描述                                    |
+| ------ | --------------------------------------- |
+| gen    | 生成 Service Worker, manifest           |
 | inject | 将 Service Worker, manifest 注入到 HTML |
-| create | 创建一个基于 Vue 或 React 的 PWA 项目 |
-| upload | 上传 PWA 到预览环境 |
-| audit  | 检测指定的 PWA |
- 
- 
+| create | 创建一个基于 Vue 或 React 的 PWA 项目   |
+| upload | 上传 PWA 到预览环境                     |
+| audit  | 检测指定的 PWA                          |
+
 查看 `PWA Kit CLI` 使用手册：
+
 ```bash
 kit --help
 ```
@@ -72,7 +75,6 @@ kit --help
 ## 文档
 
 `PWA Kit CLI` 详细使用文档：[文档链接](https://chinapwa.github.io/usage)
-
 
 ## 许可
 
