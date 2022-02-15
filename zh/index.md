@@ -12,7 +12,7 @@ lang: zh-CN
 ![node-current](https://img.shields.io/badge/node-%3E=14.0.0-green)
 
 <div align=center>
-<img src="/assets/images/icon.png" style="zoom: 40%">
+<img src="https://chinapwa.github.io/assets/images/icon.png" style="zoom: 40%">
 </div>
 
 ## 概述
