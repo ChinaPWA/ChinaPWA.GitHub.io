@@ -128,3 +128,18 @@ kit audit <url> [options]
 | :---------: | :----: | :----: | :--------------------------------------------------------------------------------------------------: |
 | &lt;url&gt; |   是   |   无   |                                      要检测 PWA 应用的地址链接                                       |
 | `-t --type` |   是   |  text  | 生成检测报告的形式，支持直接返回检测结果或返回一个包含检测结果的页面，可选的值包括 &lt;text\|web&gt; |
+
+### 指令式命令
+
+如果想在您自己的应用程序中集成 `PWA Kit Cli`，您就可以将 `PWA Kit Cli` 的指令式命令内嵌到您的代码中（前提是您已经全局安装了 `PWA Kit Cli`），这里我们以 `inject` 命令为例，代码示例如下所示：
+
+```javascript
+const execa = require('execa')
+
+await execa('kit', [
+    'inject',
+    './index.html',
+    '--manifest-path', './manifest.json',
+    '--sw-path', './serviceWorker.js'
+], { stdio: 'inherit' })
+```
