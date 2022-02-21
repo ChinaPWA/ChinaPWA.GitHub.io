@@ -6,7 +6,7 @@
 {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    {% if page.redirect %}<meta http-equiv="refresh" content="0; url={{ page.redirect }}">{% endif %}
+    <!-- {% if page.redirect %}<meta http-equiv="refresh" content="0; url={{ page.redirect }}">{% endif %} -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -33,6 +33,11 @@
       </footer>
     </main>
     <script>
+        const { pathname } = window.location
+        if (pathname === '/') {
+          window.location.href = '/zh'
+        }
+        
         function changeLang(lang) {
             const { pathname } = location
             const pathArray = pathname.substr(1).split('/')
