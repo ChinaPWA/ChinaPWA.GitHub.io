@@ -1,6 +1,6 @@
 ---
 title: "PWA Kit CLI"
-permalink: /en/usage/
+permalink: /en/cli
 lang: en-US
 ---
 
