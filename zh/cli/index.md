@@ -1,6 +1,6 @@
 ---
 title: "PWA Kit —— 顾问式 PWA 工具集"
-permalink: /zh/cli
+permalink: /zh/cli/
 lang: zh-CN
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "PWA Kit CLI"
-permalink: /zh/cli/usage
+permalink: /zh/cli/usage/
 lang: zh-CN
 ---
 
