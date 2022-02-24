@@ -30,7 +30,7 @@ Check out the `PWA Kit CLI` help manual:
 kit --help
 ```
 
-Note that the commands in `PWA Kit CLI` support both `Q&A` and `one-off` modes. For example, take the `kit create <project_path> [options]` command to generate `PWA`, when no options are entered, the system will make the required items in the form of `Q&A`, if some of the required `options` are filled in, then then `Q&A` will skip the filled options, and only need to answer those unfilled options.
+Note that the commands in `PWA Kit CLI` support both `prompting` and `one-off` modes. For example, take the `kit create <project_path> [options]` command to generate `PWA`, when no options are entered, the system will make the required items in the form of `prompting`, if some of the required `options` are filled in, then then `prompting` will skip the filled options, and only need to answer those unfilled options.
 
 ### gen
 
@@ -61,7 +61,7 @@ kit gen [options]
 
 ### Service Worker templates
 
-Generating `Service Worker` currently does not support the `options` , which can be selected through `Q&A`. Currently, 4 templates are supported. The detailed introduction is as follows:
+Generating `Service Worker` currently does not support the `options` , which can be selected through `prompting`. Currently, 4 templates are supported. The detailed introduction is as follows:
 
 |       template name       | description                                                                                                                                                 |
 | :------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -81,7 +81,7 @@ The set of commands are as follows:
 | inject | Inject Service Worker, manifest into HTML |
 | create | Create a Vue.js or React based PWA project|
 | upload | Upload the PWA to the preview environment |
-| audit  | Audit the specified PWA                   |
+| audit  | Detect Online PWAs                        |
 
 Check out the `PWA Kit CLI` help manual:
 
