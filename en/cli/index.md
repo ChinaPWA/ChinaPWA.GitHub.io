@@ -15,10 +15,10 @@ lang: en-US
 <img src="https://chinapwa.github.io/assets/images/icon.png" style="zoom: 40%">
 </div>
 
-PWA Kit is a clever set of tools for [`Progressive Web Apps(PWA)`](https://web.dev/what-are-pwas/).
-PWA Kit CLI is the CLI tool of PWA Kit.
+PWA Kit is a smart toolset for [`Progressive Web Apps(PWA)`](https://web.dev/what-are-pwas/).
+PWA Kit CLI is the CLI edition of PWA Kit.
 ## Features
-- Consultative command interaction: Combine `one-off` and `Q&A` interaction modes, automatically ask for missing required items.
+- Consultative command interaction: Support `one-off` and `prompting` interface modes, automatically ask for missing required options.
 - Multiple Entries: Supports multiple operation entries such as folders, offline packages, and online URLs.
 - Controllable and streamlined PWA generation.
 - Automated code injection: One-click generation of various service worker templates and missing code.
