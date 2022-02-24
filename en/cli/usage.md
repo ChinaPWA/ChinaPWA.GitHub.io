@@ -30,7 +30,7 @@ Check out the `PWA Kit CLI` help manual:
 kit --help
 ```
 
-Note that the commands in `PWA Kit CLI` support both `Q&A` and `one-off` modes. For example, take the `kit create <project_path> [options]` command to generate `pwa`, when no options are entered, the system will make the required items in the form of `Q&A`, if some of the required `options` are filled in, then then `Q&A` will skip the filled options, and only need to answer those unfilled options.
+Note that the commands in `PWA Kit CLI` support both `Q&A` and `one-off` modes. For example, take the `kit create <project_path> [options]` command to generate `PWA`, when no options are entered, the system will make the required items in the form of `Q&A`, if some of the required `options` are filled in, then then `Q&A` will skip the filled options, and only need to answer those unfilled options.
 
 ### gen
 

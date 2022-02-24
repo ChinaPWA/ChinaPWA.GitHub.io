@@ -35,7 +35,7 @@ Any web page can be easily converted into a PWA, and it also includes the basic 
 
 ## Preconditions
 
-Installing `PWA Kit CLI` requires [`Node.js`](https://nodejs.org/en/download/releases/#ref-1) version higher than `14.0.0`, [`NPM`](https://nodejs.org/en/download/releases/#ref-1) ://www.npmjs.com/package/npm) version higher than `6.14.4`.
+Installing `PWA Kit CLI` requires [`Node.js`](https://nodejs.org/en/download/releases/#ref-1) version higher than `14.0.0`, [`NPM`](https://www.npmjs.com/package/npm) version higher than `6.14.4`.
 
 
 ## Installation
@@ -91,7 +91,7 @@ kit --help
 
 ## Documentation
 
-`PWA Kit CLI` detailed documentation: [link](https://chinapwa.github.io/zh/usage)
+`PWA Kit CLI` detailed documentation: [link](https://chinapwa.github.io/en/cli/usage)
 
 ## Licenses
 

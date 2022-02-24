@@ -92,7 +92,7 @@ kit --help
 
 ## 文档
 
-`PWA Kit CLI` 详细使用文档：[文档链接](https://chinapwa.github.io/zh/usage)
+`PWA Kit CLI` 详细使用文档：[文档链接](https://chinapwa.github.io/zh/cli/usage)
 
 ## 许可
 
