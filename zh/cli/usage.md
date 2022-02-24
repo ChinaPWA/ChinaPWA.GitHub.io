@@ -1,10 +1,10 @@
 ---
-title: "PWA Kit CLI"
+title: "PWA Kit —— 顾问式 PWA 工具集"
 permalink: /zh/cli/usage/
 lang: zh-CN
 ---
 
-# PWA Kit CLI
+# PWA Kit —— 顾问式 PWA 工具集
 
 ## 使用说明
 
@@ -74,6 +74,10 @@ kit gen [options]
 
 inject 命令可以将 `Service Worker`, `manifest` 注入到您已经写好的 HTML 中，从而使您的应用可以快速转化成 `PWA`  
 注入的命令可以描述为：
+
+```bash
+kit inject <html_path> [options]
+```
 
 |       参数        | 必填项 | 默认值 | 描述                                 |
 | :---------------: | :----: | :----: | :----------------------------------- |

@@ -16,11 +16,11 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <!-- <div class="language-swicher"><span onclick="changeLang('zh')">中文</span>/<span onclick="changeLang('en')">English</span></div> -->
+      <div class="language-swicher"><span onclick="changeLang('zh')">中文</span>/<span onclick="changeLang('en')">English</span></div>
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
     {% if page.lang == "zh-CN" %}<a href="/zh/cli/" class="btn">概述</a><a href="/zh/cli/usage/" class="btn">使用说明</a>{% endif %}
-    {% if page.lang == "en-US" %}<a href="/en/cli/" class="btn">description</a><a href="/en/cliusage/" class="btn">usage</a>{% endif %}
+    {% if page.lang == "en-US" %}<a href="/en/cli/" class="btn">Overview</a><a href="/en/cli/usage/" class="btn">Usage</a>{% endif %}
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -34,7 +34,7 @@
     <script>
         const { pathname } = window.location
         if (pathname === '/') {
-          window.location.href = '/zh/cli'
+          window.location.href = '/zh/cli/'
         }
         
         function changeLang(lang) {
