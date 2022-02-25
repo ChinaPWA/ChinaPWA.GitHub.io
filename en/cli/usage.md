@@ -14,7 +14,7 @@ The command of `PWA Kit CLI` is as follows:
 kit <command> [ <options> [optional options] ]
 ```
 
-The set of commands are as follows:
+Supported commands are::
 
 | command | description                                |
 | :-----: | :----------------------------------------- |
@@ -30,7 +30,7 @@ Check out the `PWA Kit CLI` help manual:
 kit --help
 ```
 
-Note that the commands in `PWA Kit CLI` support both `prompting` and `one-off` modes. For example, take the `kit create <project_path> [options]` command to generate `PWA`, when no options are entered, the system will make the required items in the form of `prompting`, if some of the required `options` are filled in, then then `prompting` will skip the filled options, and only need to answer those unfilled options.
+Commands in `PWA Kit CLI` support both `interactive` and `one-off` modes. When you are using `kit create <project_path> [options]` command to generate `PWA`, if none of the options are provided, `PWA Kit CLI` will promopt you for required items through `interactive promptings`, if some of the required `options` are filled in, then our `interactive prompting` interface will skip these provided options, and you only nedd to provide those unfilled options.
 
 ### gen
 
@@ -61,18 +61,18 @@ kit gen [options]
 
 ### Service Worker templates
 
-Generating `Service Worker` currently does not support the `options` , which can be selected through `prompting`. Currently, 4 templates are supported. The detailed introduction is as follows:
+We currently don't support generating `Service Worker` through `options` arguments but you can be set them through `interactive promptings`. Currently, 4 templates are supported. The detailed introduction is as follows:
 
 |       template name       | description                                                                                                                                                 |
 | :------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
-|    `OfflinePage`     | The solution will jump to an offline page named `offline.html` (this page needs to be created manually) when the network is disconnected                                                                      |
-| `OfflineCopyOfPages` | A solution to extend the offline capabilities of your app. A copy of each page is stored in the cache as your visitors view them. This allows the visitor to load any previously viewed page while offline                  |
-| `CacheFirstNetwork`  | Cache static resources using the `CacheFirst` strategy. When the cached resource does not exist, it will be obtained through the network                                    |
+|    `OfflinePage`     | This templete supports jump to an offline page named `offline.html` (which need to be created manually) when the network is disconnected.                                                                      |
+| `OfflineCopyOfPages` |  Each page your visitors viewed is cached that allows the visitor to reload any previously viewed page while offline and extends the offline capabilities of your app.                 |
+| `CacheFirstNetwork`  | THis caches static resources using the `CacheFirst` strategy. When the cached resource does not exist, it will be obtained through the network                                    |
 |  `AdvancedCaching`   | Use this service worker to improve the performance of your application and make it work offline. Advanced cache service workers allow you to configure files and routes to be cached in different ways (pre-cache, server-first, cache-first, etc.) |
 
 ### inject
 
-The inject command can inject `Service Worker`, `manifest` into the HTML you have written, so that your application can be quickly converted into `PWA`.  
+The inject command can inject `Service Worker`, `manifest` into your HTML files, so that your application can be quickly converted into a `PWA`.
 The command is as follows:
 
 ```bash
@@ -87,7 +87,7 @@ kit inject <html_path> [options]
 
 ### create
 
-`kit create` is used to generate a `PWA` project. The parameters that can be set include `manifest` configuration items, `Service Worker` templates, and specified front-end frameworks, including `Vue 2`, `Vue 3`, ` React`, whether to use `TypeScript`, etc.
+`kit create` is used to generate a `PWA` project. The arguments that can be set include `manifest` configuration items, `Service Worker` templates, and specified front-end frameworks, including `Vue 2`, `Vue 3`, ` React`, using `TypeScript` or not, etc.
 The command is as follows:
 
 ```bash
@@ -98,18 +98,19 @@ kit create <project_path> [options]
 | :------------------: | :----------------------: | :----: | :-------------------------------------------------------------------------------------------: |
 | &lt;project_path&gt; |            yes            |   none   |                          The directory where the `PWA` project is generated, do not specify a non-empty directory                          |
 |     `--template`     |            yes            |   none   |                The framework used by the front-end project, optional values ​​include &lt;vue \| react &gt;                 |
-|   `--vue-version`    | yes（When template is vue） |   none   | It takes effect when `template` is `vue`. It is used to specify the version of the generated Vue framework. Optional values ​​include &lt;`2` \| `3`&gt; |
+|   `--vue-version`    | yes（When template is vue） |   none   | It takes effect when `template` is `vue`. It is used to specify the version of the  Vue framework. Optional values ​​include &lt;`2` \| `3`&gt; |
 |    `--typescript`    |            yes            |   none   |          Whether the project uses the `TypeScript` framework, optional values ​​include &lt;true \| false &gt;          |
 |   `--installable`    |            yes            |   none   |       Whether the system automatically downloads the `npm` package that the project depends on. The optional values ​​include &lt;true \| false &gt;        |
 |     `--web-url`      |            no            |   none   |     `manifest`, `Service Worker` can be obtained through a `PWA` site, the priority will be lower than the options above      |
 
 **manifest options and Service Worker templates are the same as the gen command**
 
-> It should be noted that the front-end application is generated using the scaffolding of the respective frameworks, so to start the project under `Vue` is `npm run serve`, and under `React` it is `npm start`.
+> Please note that the front-end application is generated using the frameworks you chosen. So to start the project using `Vue`, use `npm run serve` and for `React` use `npm start`.
 
 ### upload
 
-The upload command can upload the `PWA` application to the preview environment we prepared, and check the effect of the `PWA` deployed online. The effective time to view the preview result is 2 hours after you upload the preview application.
+The upload command upload the `PWA` application to the preview environment we created where you can view the result of your `PWA` online.It takes about 2 hours for us to generate the preview.
+
 The command is as follows:
 
 ```bash
@@ -122,7 +123,7 @@ kit upload <project_path>
 
 ### audit
 
-`PWA Kit CLI` also integrates the detection function of `lighthouse` for `PWA`, which can generate multi-dimensional detection reports.
+`PWA Kit CLI` also integrates the detection ability of `lighthouse` for `PWA`, which can generate multi-directional detection reports.
 The command is as follows:
 
 ```bash
@@ -132,11 +133,11 @@ kit audit <url> [options]
 |    option     | required | default |                                            description                                                |
 | :---------: | :----: | :----: | :--------------------------------------------------------------------------------------------------: |
 | &lt;url&gt; |   yes   |   none   |                                      To detect the address link of the PWA app                                       |
-| `-t --type` |   yes   |  text  | The form of generating a test report supports returning the test results directly or returning a page containing the test results. The optional values ​​include &lt;text\|web&gt; |
+| `-t --type` |   yes   |  text  | Choose the form of generated test reports. Return the test results directly or a page containing the test results. The optional values ​​include &lt;text\|web&gt; |
 
 ### One-off mode
 
-If you want to integrate `PWA Kit Cli` in your own application, you can embed `PWA Kit Cli` imperative commands into your code (provided you have `PWA Kit Cli` installed globally) , here we take the `inject` command as an example, the code example is as follows:
+If you want to integrate `PWA Kit Cli` into your own application, you can embed `PWA Kit Cli` imperative commands into your code (provided you have `PWA Kit Cli` installed globally) , here we take the `inject` command as an example, the code example is as follows:
 
 ```javascript
 const execa = require("execa");
