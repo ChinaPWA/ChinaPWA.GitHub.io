@@ -90,6 +90,7 @@ kit --help
 ```
 
 ## Documentation
+`PWA Kit CLI` Chinese document: [link](https://chinapwa.github.io/zh/cli)
 
 `PWA Kit CLI` detailed documentation: [link](https://chinapwa.github.io/en/cli/usage)
 

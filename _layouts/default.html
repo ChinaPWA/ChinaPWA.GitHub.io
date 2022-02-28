@@ -34,7 +34,11 @@
     <script>
         const { pathname } = window.location
         if (pathname === '/') {
-          window.location.href = '/zh/cli/'
+          let language = 'en'
+          if (navigator.language && navigator.language.split('-')[0] === 'zh') {
+            language = 'zh'
+          }
+          window.location.href = `/${language}/cli/`
         }
         
         function changeLang(lang) {
