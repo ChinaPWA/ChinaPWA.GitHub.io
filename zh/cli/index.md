@@ -76,13 +76,12 @@ kit <子命令> [ <参数> [可选参数] ]
 
 子命令集合如下所示：
 
-| 子命令 | 描述                                    |
-| ------ | --------------------------------------- |
-| gen    | 生成 Service Worker, manifest           |
-| inject | 将 Service Worker, manifest 注入到 HTML |
-| create | 创建一个基于 Vue.js 或 React 的 PWA 项目   |
-| upload | 上传 PWA 到预览环境                     |
-| audit  | 检测指定的 PWA                          |
+| 子命令 | 描述                                     |
+| ------ | ---------------------------------------- |
+| create | 创建一个基于 Vue.js 或 React 的 PWA 项目 |
+| gen    | 生成 Service Worker, manifest            |
+| inject | 将 Service Worker, manifest 注入到 HTML  |
+| audit  | 检测指定的 PWA                           |
 
 查看 `PWA Kit CLI` 使用手册：
 
@@ -90,7 +89,86 @@ kit <子命令> [ <参数> [可选参数] ]
 kit --help
 ```
 
+## 使用案例
+
+### 创建一个 PWA 项目
+
+我们可以用 `create` 命令来创建一个 `PWA` 项目
+
+```bash
+kit create <project_name>
+```
+
+其中 project_name 为创建项目的项目名称，接下来将通过 `问答式` 的方式补全其它选项，`问答式` 的选项列表如下所示
+| 选项 | 描述 | 默认值 |
+| --- | --- | --- |
+PWA 的名称 | 用于指定 `manifest` 中的 `name` 字段 | Pwa Application |
+PWA 的简短易读名称 | 用于指定 `manifest` 中的 `short_name` 字段 | PWA APP
+PWA 启动时加载的 URL | 用于指定 `manifest` 中的 `start_url` | /index.html
+PWA 的图标路径 (本地或网络地址) | 传入本地或者 web 图片地址，用于生成 `manifest` 中的 `icons` 字段，推荐使用 `512x512` 像素及其以上大小的图片 | <img src="/assets/images/icon.png" style="zoom:40%"> |
+选择一个 `Service Worker` 模板 | 用于生成 `PWA` 的 `Service Worker` 模版，可选值包括：`OfflinePage`, `OfflineCopyOfPages`, `CacheFirstNetwork`, `AdvancedCaching`（关于 `Service Worker` 模板的具体含义请查看 `Service Worker` 模版介绍）| 无
+选择 UI 框架 | 选择前端项目使用的 UI 框架，可选值包括 `vue`, `react` | 无
+选择 Vue.js 版本 | 只有 UI 框架选择为 `vue` 时出现，可选择的值 `vue 2.x`, `vue 3.x` | 无
+创建后自动安装 NPM 包 | 可选值 y/n | n
+
+经过以上的`问答式`步骤后，我们将得到一个已添加 Manifest 和 Service Worker 配置的 PWA 项目
+
+### 生成一个 Manifest 和 Service Worker 文件
+
+我们可以用 `gen` 命令生成 Manifest 和 Service Worker 
+
+```
+kit gen
+```
+
+执行后可以通过 `问答式` 的方式补全其他选项，`问答式` 的选项列表如下所示
+| 选项 | 描述 | 默认值 |
+| --- | --- | --- |
+选择您要生成的文件类型 | 用于指定生成的文件类型，可选值包括：Service Worker 和 Manifest, Service Worker, Manifest | 无
+
+若选择的选项包含 Manifest，则会出现以下选项
+
+| 选项 | 描述 | 默认值 |
+| --- | --- | --- |
+PWA 的名称 | 用于指定 `manifest` 中的 `name` 字段 | Pwa Application |
+PWA 的简短易读名称 | 用于指定 `manifest` 中的 `short_name` 字段 | PWA APP
+PWA 启动时加载的 URL | 用于指定 `manifest` 中的 `start_url` | /index.html
+PWA 的图标路径 (本地或网络地址) | 传入本地或者 web 图片地址，用于生成 `manifest` 中的 `icons` 字段，推荐使用 `512x512` 像素及其以上大小的图片 | <img src="/assets/images/icon.png" style="zoom:40%"> |
+
+若选择的选项包含 Service Worker，则会出现以下选项
+
+| 选项 | 描述 | 默认值 |
+| --- | --- | --- |
+选择一个 `Service Worker` 模板 | 用于生成 `PWA` 的 `Service Worker` 模版，可选值包括：`OfflinePage`, `OfflineCopyOfPages`, `CacheFirstNetwork`, `AdvancedCaching`（关于 `Service Worker` 模板的具体含义请查看 `Service Worker` 模版介绍）| 无
+
+执行后我们在当前路径下生成了 `Manifest` 和 `Service Worker` 
+
+### 将 Manifest 和 Service Worker 注入到 html 中
+
+我们可以用 `inject` 命令将 `Manifest` 和 `Service Worker` 注入到 `html` 中 
+
+比如我们要将当前目录下的 `manifest.json` 注入到 html 中可以使用下面这种方式
+ 
+```
+kit inject index.html --manifest-path=./manifest.json
+```
+
+如果我们要将当前目录下的 `serviceWorker.js` 注入到 html 中可以使用下面这种方式
+
+```
+kit inject index.html --sw-path=./serviceWorker.js
+```
+
+### 使用 audit 命令
+
+我们可以使用 `audit` 命令对 `PWA` 进行检测，命令如下所示
+
+```
+kit audit <url>
+```
+
 ## 文档
+
 `PWA Kit CLI` 英文文档：[文档链接](https://chinapwa.github.io/en/cli/)
 
 `PWA Kit CLI` 详细使用文档：[文档链接](https://chinapwa.github.io/zh/cli/usage)

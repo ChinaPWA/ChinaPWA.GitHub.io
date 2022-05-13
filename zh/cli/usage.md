@@ -18,10 +18,9 @@ kit <子命令> [ <参数> [可选参数] ]
 
 | 子命令 | 描述                                    |
 | :----: | :-------------------------------------- |
+| create | 创建一个 Vue 或 React 的 PWA 项目       |
 |  gen   | 用于生成 Service Worker, manifest       |
 | inject | 将 Service Worker, manifest 注入到 HTML |
-| create | 创建一个 Vue 或 React 的 PWA 项目       |
-| upload | 上传 PWA 到预览环境                     |
 | audit  | 检测在线 PWA                            |
 
 查看 `PWA Kit CLI` 使用手册：
@@ -46,7 +45,6 @@ kit gen [options]
 | `-t, --type` |   是   |   否   | 选择生成 `Service Worker`、`manifest` 或者全都生成，可选的值包括 &lt;all \| manifest \| serviceWorker&gt; |
 
 #### manifest 相关参数
-
 |         参数          | 必填项 |                        默认值                        | 描述                                                                                                        |
 | :-------------------: | :----: | :--------------------------------------------------: | :---------------------------------------------------------------------------------------------------------- |
 |     `-n, --name`      |   是   |                   PWA Application                    | 用于指定 `manifest` 中的 `name` 字段                                                                        |
@@ -61,7 +59,7 @@ kit gen [options]
 
 ### Service Worker 模版
 
-生成 `Service Worker` 目前还不支持 `options` 参数的方式，可以通过问答式进行选择，目前支持 4 种模版，详细的介绍如下所示：
+生成 `Service Worker` 目前还不支持 `options` 参数的方式，可以通过 `问答式` 进行选择，目前支持 4 种模版，详细的介绍如下所示：
 
 |       模版名称       | 描述                                                                                                                                                 |
 | :------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -107,18 +105,6 @@ kit create <project_path> [options]
 
 > 需要注意的是，前端应用底层使用各自框架的脚手架生成，所以在 `Vue` 下启动项目为 `npm run serve`，在 `React` 下启动为 `npm start`。
 
-### upload 命令
-
-upload 命令可以将 `PWA` 上传到我们准备的预览环境，查看 `PWA` 部署到线上的效果，查看预览结果的有效时间为从您上传预览应用后的 2 小时。上传 `PWA` 到预览环境的命令可以描述为：
-
-```bash
-kit upload <project_path>
-```
-
-|         参数         | 必填项 | 默认值 |                                        描述                                         |
-| :------------------: | :----: | :----: | :---------------------------------------------------------------------------------: |
-| &lt;project_path&gt; |   是   |   无   | 上传本地 `PWA` 到预览环境的路径地址，注意在该路径下应该存在唯一的 `index.html` 文件 |
-
 ### audit 命令
 
 `PWA Kit CLI` 也集成了 `lighthouse` 对 `PWA` 的检测功能，可以生成多维度的检测报告。  
@@ -130,7 +116,7 @@ kit audit <url> [options]
 
 |    参数     | 必填项 | 默认值 |                                                 描述                                                 |
 | :---------: | :----: | :----: | :--------------------------------------------------------------------------------------------------: |
-| &lt;url&gt; |   是   |   无   |                                      要检测 PWA 的地址链接                                       |
+| &lt;url&gt; |   是   |   无   |                                        要检测 PWA 的地址链接                                         |
 | `-t --type` |   是   |  text  | 生成检测报告的形式，支持直接返回检测结果或返回一个包含检测结果的页面，可选的值包括 &lt;text\|web&gt; |
 
 ### 指令式命令
@@ -138,12 +124,18 @@ kit audit <url> [options]
 如果想在您自己的应用程序中集成 `PWA Kit Cli`，您就可以将 `PWA Kit Cli` 的指令式命令内嵌到您的代码中（前提是您已经全局安装了 `PWA Kit Cli`），这里我们以 `inject` 命令为例，代码示例如下所示：
 
 ```javascript
-const execa = require('execa')
+const execa = require("execa");
 
-await execa('kit', [
-    'inject',
-    './index.html',
-    '--manifest-path', './manifest.json',
-    '--sw-path', './serviceWorker.js'
-], { stdio: 'inherit' })
+await execa(
+  "kit",
+  [
+    "inject",
+    "./index.html",
+    "--manifest-path",
+    "./manifest.json",
+    "--sw-path",
+    "./serviceWorker.js",
+  ],
+  { stdio: "inherit" }
+);
 ```
