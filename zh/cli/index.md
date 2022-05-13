@@ -100,7 +100,7 @@ kit create your-project-name
 
 其中 your-project-name 为创建项目的目录名称 ，接下来将通过 `问答式` 的方式补全其它选项，`问答式` 的选项列表如下所示
 | 选项 | 描述 | 默认值 |
-| ------ | ------ | ------ |
+| :------: | :----------------------------------------------------: | :------: |
 PWA 的名称 | 用于指定 `manifest` 中的 `name` 字段 | Your Progressive Web Apps |
 PWA 的简短易读名称 | 用于指定 `manifest` 中的 `short_name` 字段 | Your PWA |
 PWA 启动时加载的 URL | 用于指定 `manifest` 中的 `start_url` | /index.html
@@ -122,7 +122,7 @@ kit gen
 
 执行后可以通过 `问答式` 的方式补全其他选项，`问答式` 的选项列表如下所示：
 | 选项 | 描述 | 默认值 |
-| ------ | ------ | ------ |
+| :------: | :----------------------------------------------------: | :------: |
 选择您要生成的文件类型 | 用于指定生成的文件类型，可选值包括：Service Worker 和 Manifest, Service Worker, Manifest | Service Worker 和 Manifest |
 
 若选择的选项包含 Manifest，则会出现以下选项
@@ -180,3 +180,4 @@ kit audit www.foo-bar.com
 
 [pwa-kit-core](https://www.npmjs.com/package/@dingos/pwa-kit-core)  
 [pwa-kit-template](https://www.npmjs.com/package/@dingos/pwa-kit-template)
+ 
