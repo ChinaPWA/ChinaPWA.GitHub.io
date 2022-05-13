@@ -99,16 +99,17 @@ kit create your-project-name
 ```
 
 其中 your-project-name 为创建项目的目录名称 ，接下来将通过 `问答式` 的方式补全其它选项，`问答式` 的选项列表如下所示
-| 选项 | 描述 | 默认值 |
-| :------: | :----------------------------------------------------: | :------: |
-PWA 的名称 | 用于指定 `manifest` 中的 `name` 字段 | Your Progressive Web Apps |
-PWA 的简短易读名称 | 用于指定 `manifest` 中的 `short_name` 字段 | Your PWA |
-PWA 启动时加载的 URL | 用于指定 `manifest` 中的 `start_url` | /index.html
-PWA 的图标路径 (本地或网络地址) | 传入本地或者 web 图片地址，用于生成 `manifest` 中的 `icons` 字段，推荐使用 `512x512` 像素及其以上大小的图片 | <img src="/assets/images/icon.png" style="zoom:40%"> |
-选择一个 `Service Worker` 模板 | 用于生成 `PWA` 的 `Service Worker` 模版，可选值包括：`OfflinePage`, `OfflineCopyOfPages`, `CacheFirstNetwork`, `AdvancedCaching`（关于 `Service Worker` 模板的具体含义请查看 `Service Worker` 模版介绍）| `OfflinePage`
-选择 UI 框架 | 选择前端项目使用的 UI 框架，可选值包括 `vue`, `react` | `vue`
-选择 Vue.js 版本 | 只有 UI 框架选择为 `vue` 时出现，可选择的值 `vue 2.x`, `vue 3.x` | `vue 2.x`
-创建后自动安装 NPM 包 | 可选值 y/n | n
+
+| 选项                            | 描述                                                                                                                                                                                                     | 默认值                                               |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| PWA 的名称                      | 用于指定 `manifest` 中的 `name` 字段                                                                                                                                                                     | Your Progressive Web Apps                            |
+| PWA 的简短易读名称              | 用于指定 `manifest` 中的 `short_name` 字段                                                                                                                                                               | Your PWA                                             |
+| PWA 启动时加载的 URL            | 用于指定 `manifest` 中的 `start_url`                                                                                                                                                                     | /index.html                                          |
+| PWA 的图标路径 (本地或网络地址) | 传入本地或者 web 图片地址，用于生成 `manifest` 中的 `icons` 字段，推荐使用 `512x512` 像素及其以上大小的图片                                                                                              | <img src="/assets/images/icon.png" style="zoom:40%"> |
+| 选择一个 `Service Worker` 模板  | 用于生成 `PWA` 的 `Service Worker` 模版，可选值包括：`OfflinePage`, `OfflineCopyOfPages`, `CacheFirstNetwork`, `AdvancedCaching`（关于 `Service Worker` 模板的具体含义请查看 `Service Worker` 模版介绍） | `OfflinePage`                                        |
+| 选择 UI 框架                    | 选择前端项目使用的 UI 框架，可选值包括 `vue`, `react`                                                                                                                                                    | `vue`                                                |
+| 选择 Vue.js 版本                | 只有 UI 框架选择为 `vue` 时出现，可选择的值 `vue 2.x`, `vue 3.x`                                                                                                                                         | `vue 2.x`                                            |
+| 创建后自动安装 NPM 包           | 可选值 y/n                                                                                                                                                                                               | n                                                    |
 
 经过以上的步骤后，我们将得到一个包含 Manifest 和 Service Worker 的 PWA 项目。
 
@@ -121,9 +122,10 @@ kit gen
 ```
 
 执行后可以通过 `问答式` 的方式补全其他选项，`问答式` 的选项列表如下所示：
-| 选项 | 描述 | 默认值 |
-| :------: | :----------------------------------------------------: | :------: |
-选择您要生成的文件类型 | 用于指定生成的文件类型，可选值包括：Service Worker 和 Manifest, Service Worker, Manifest | Service Worker 和 Manifest |
+
+| 选项                   | 描述                                                                                     | 默认值                     |
+| ---------------------- | ---------------------------------------------------------------------------------------- | -------------------------- |
+| 选择您要生成的文件类型 | 用于指定生成的文件类型，可选值包括：Service Worker 和 Manifest, Service Worker, Manifest | Service Worker 和 Manifest |
 
 若选择的选项包含 Manifest，则会出现以下选项
 
@@ -180,4 +182,3 @@ kit audit www.foo-bar.com
 
 [pwa-kit-core](https://www.npmjs.com/package/@dingos/pwa-kit-core)  
 [pwa-kit-template](https://www.npmjs.com/package/@dingos/pwa-kit-template)
- 
