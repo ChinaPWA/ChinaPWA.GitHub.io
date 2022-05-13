@@ -102,10 +102,10 @@ kit create your-project-name
 
 | 选项                            | 描述                                                                                                                                                                                                     | 默认值                                               |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| PWA 的名称                      | 用于指定 `manifest` 中的 `name` 字段                                                                                                                                                                     | Your Progressive Web Apps                            |
-| PWA 的简短易读名称              | 用于指定 `manifest` 中的 `short_name` 字段                                                                                                                                                               | Your PWA                                             |
-| PWA 启动时加载的 URL            | 用于指定 `manifest` 中的 `start_url`                                                                                                                                                                     | /index.html                                          |
-| PWA 的图标路径 (本地或网络地址) | 传入本地或者 web 图片地址，用于生成 `manifest` 中的 `icons` 字段，推荐使用 `512x512` 像素及其以上大小的图片                                                                                              | <img src="/assets/images/icon.png" style="zoom:40%"> |
+| PWA 的名称                      | 用于指定 `Manifest` 中的 `name` 字段                                                                                                                                                                     | Your Progressive Web Apps                            |
+| PWA 的简短易读名称              | 用于指定 `Manifest` 中的 `short_name` 字段                                                                                                                                                               | Your PWA                                             |
+| PWA 启动时加载的 URL            | 用于指定 `Manifest` 中的 `start_url`                                                                                                                                                                     | /index.html                                          |
+| PWA 的图标路径 (本地或网络地址) | 传入本地或者 web 图片地址，用于生成 `Manifest` 中的 `icons` 字段，推荐使用 `512x512` 像素及其以上大小的图片                                                                                              | <img src="/assets/images/icon.png" style="zoom:40%"> |
 | 选择一个 `Service Worker` 模板  | 用于生成 `PWA` 的 `Service Worker` 模版，可选值包括：`OfflinePage`, `OfflineCopyOfPages`, `CacheFirstNetwork`, `AdvancedCaching`（关于 `Service Worker` 模板的具体含义请查看 `Service Worker` 模版介绍） | `OfflinePage`                                        |
 | 选择 UI 框架                    | 选择前端项目使用的 UI 框架，可选值包括 `vue`, `react`                                                                                                                                                    | `vue`                                                |
 | 选择 Vue.js 版本                | 只有 UI 框架选择为 `vue` 时出现，可选择的值 `vue 2.x`, `vue 3.x`                                                                                                                                         | `vue 2.x`                                            |
@@ -131,16 +131,16 @@ kit gen
 
 | 选项                            | 描述                                                                                                        | 默认值                                               |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| PWA 的名称                      | 用于指定 `manifest` 中的 `name` 字段                                                                        | Your Progressive Web Apps                            |
-| PWA 的简短易读名称              | 用于指定 `manifest` 中的 `short_name` 字段                                                                  | Your PWA                                             |
-| PWA 启动时加载的 URL            | 用于指定 `manifest` 中的 `start_url`                                                                        | /index.html                                          |
-| PWA 的图标路径 (本地或网络地址) | 传入本地或者 web 图片地址，用于生成 `manifest` 中的 `icons` 字段，推荐使用 `512x512` 像素及其以上大小的图片 | <img src="/assets/images/icon.png" style="zoom:40%"> |
+| PWA 的名称                      | 用于指定 `Manifest` 中的 `name` 字段                                                                        | Your Progressive Web Apps                            |
+| PWA 的简短易读名称              | 用于指定 `Manifest` 中的 `short_name` 字段                                                                  | Your PWA                                             |
+| PWA 启动时加载的 URL            | 用于指定 `Manifest` 中的 `start_url`                                                                        | /index.html                                          |
+| PWA 的图标路径 (本地或网络地址) | 传入本地或者 web 图片地址，用于生成 `Manifest` 中的 `icons` 字段，推荐使用 `512x512` 像素及其以上大小的图片 | <img src="/assets/images/icon.png" style="zoom:40%"> |
 
 若选择的选项包含 Service Worker，则会出现以下选项
 
 | 选项                           | 描述                                                                                                                                                                                                     | 默认值 |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| 选择一个 `Service Worker` 模板 | 用于生成 `PWA` 的 `Service Worker` 模版，可选值包括：`OfflinePage`, `OfflineCopyOfPages`, `CacheFirstNetwork`, `AdvancedCaching`（关于 `Service Worker` 模板的具体含义请查看 `Service Worker` 模版介绍） | 无     |
+| 选择一个 `Service Worker` 模板 | 用于生成 `PWA` 的 `Service Worker` 模版，可选值包括：`OfflinePage`, `OfflineCopyOfPages`, `CacheFirstNetwork`, `AdvancedCaching`（关于 `Service Worker` 模板的具体含义请查看 `Service Worker` 模版介绍） | `OfflinePage` |
 
 执行后，我们将在当前路径下生成 `Manifest` 和 `Service Worker`。
 
@@ -154,7 +154,7 @@ kit gen
 kit inject ./index.html --manifest-path=./manifest.json
 ```
 
-我们用下面的方式将当前目录下的 `serviceWorker.js` 注入到 HTML 文件 中：
+我们用下面的方式将当前目录下的 `serviceWorker.js` 注入到 HTML 文件中：
 
 ```
 kit inject ./index.html --sw-path=./serviceWorker.js
