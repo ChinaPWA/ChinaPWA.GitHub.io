@@ -42,7 +42,7 @@ kit gen [options]
 |     参数     | 必填项 | 默认值 | 描述                                                                                                      |
 | :----------: | :----: | :----: | :-------------------------------------------------------------------------------------------------------- |
 | `-o, --out`  |   是   |   ./   | 生成文件的输出路径                                                                                        |
-| `-t, --type` |   是   |   否   | 选择生成 `Service Worker`、`manifest` 或者全都生成，可选的值包括 &lt;all \| manifest \| serviceWorker&gt; |
+| `-t, --type` |   是   |   否   | 选择生成 `Service Worker`、`Manifest` 或者全都生成，可选的值包括 &lt;all \| manifest \| serviceWorker&gt; |
 
 #### manifest 相关参数
 |         参数          | 必填项 |                        默认值                        | 描述                                                                                                        |
@@ -121,7 +121,7 @@ kit audit <url> [options]
 
 ### 指令式命令
 
-如果想在您自己的应用程序中集成 `PWA Kit Cli`，您就可以将 `PWA Kit Cli` 的指令式命令内嵌到您的代码中（前提是您已经全局安装了 `PWA Kit Cli`），这里我们以 `inject` 命令为例，代码示例如下所示：
+如果想在您自己的应用程序中集成 `PWA Kit CLI`，您就可以将 `PWA Kit CLI` 的指令式命令内嵌到您的代码中（前提是您已经全局安装了 `PWA Kit CLI`），这里我们以 `inject` 命令为例，代码示例如下所示：
 
 ```javascript
 const execa = require("execa");
