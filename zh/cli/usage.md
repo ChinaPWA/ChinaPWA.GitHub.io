@@ -45,10 +45,11 @@ kit gen [options]
 | `-t, --type` |   是   |   否   | 选择生成 `Service Worker`、`Manifest` 或者全都生成，可选的值包括 &lt;all \| manifest \| serviceWorker&gt; |
 
 #### manifest 相关参数
-|       参数        | 必填项 | 默认值 | 描述                                 |
-| :---------------: | :----: | :----: | :----------------------------------- |
-|     `-n, --name`      |   是   |                   PWA Application                    | 用于指定 `manifest` 中的 `name` 字段                                                                        |
-|    `--short-name`     |   是   |                       PWA APP                        | 用于指定 `manifest` 中的 `short_name` 字段                                                                  |
+
+|     参数     | 必填项 | 默认值 | 描述                                                                                                      |
+| :----------: | :----: | :----: | :-------------------------------------------------------------------------------------------------------- |
+|     `-n, --name`      |   是   |                   Your Progressive Web Apps                    | 用于指定 `manifest` 中的 `name` 字段                                                                        |
+|    `--short-name`     |   是   |                       Your PWA                        | 用于指定 `manifest` 中的 `short_name` 字段                                                                  |
 |      `--display`      |   否   |                     `standalone`                     | 用于指定 `manifest` 中的 `display` 字段                                                                     |
 | `-start, --start-url` |   是   |                     /index.html                      | 用于指定 `manifest` 中的 `start_url`                                                                        |
 |       `--image`       |   是   | <img src="/assets/images/icon.png" style="zoom:40%"> | 传入本地或者 web 图片地址，用于生成 `manifest` 中的 `icons` 字段，推荐使用 `512x512` 像素及其以上大小的图片 |
